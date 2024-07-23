@@ -27,7 +27,7 @@ LOCAL_SRC_FILES := $(zlib_files)
 ifeq ($(TARGET_ARCH),arm)
   LOCAL_SDK_VERSION := 9
 endif
-include $(BUILD_STATIC_LIBRARY)
+include $(BUILD_SHARED_LIBRARY)
 
 
 # libunz used to be an unzip-only subset of libz. Only host-side tools were
