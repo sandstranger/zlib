@@ -260,7 +260,7 @@
  for small objects.
 */
 
-/* Type declarations */
+                        /* Type declarations */
 
 #ifndef OF /* function prototypes */
 #  ifdef STDC
@@ -306,7 +306,7 @@
 #endif
 
 #if defined(WINDOWS) || defined(WIN32)
-/* If building or using zlib as a DLL, define ZLIB_DLL.
+   /* If building or using zlib as a DLL, define ZLIB_DLL.
     * This is not mandatory, but it offers a little performance increase.
     */
 #  ifdef ZLIB_DLL
@@ -371,10 +371,10 @@ typedef unsigned int   uInt;  /* 16 bits or more */
 typedef unsigned long  uLong; /* 32 bits or more */
 
 #ifdef SMALL_MEDIUM
-/* Borland C/C++ and some old MSC versions ignore FAR inside typedef */
+   /* Borland C/C++ and some old MSC versions ignore FAR inside typedef */
 #  define Bytef Byte FAR
 #else
-typedef Byte  FAR Bytef;
+   typedef Byte  FAR Bytef;
 #endif
 typedef char  FAR charf;
 typedef int   FAR intf;
@@ -382,11 +382,11 @@ typedef uInt  FAR uIntf;
 typedef uLong FAR uLongf;
 
 #ifdef STDC
-typedef void const *voidpc;
-typedef void FAR   *voidpf;
-typedef void       *voidp;
+   typedef void const *voidpc;
+   typedef void FAR   *voidpf;
+   typedef void       *voidp;
 #else
-typedef Byte const *voidpc;
+   typedef Byte const *voidpc;
    typedef Byte FAR   *voidpf;
    typedef Byte       *voidp;
 #endif
@@ -403,9 +403,9 @@ typedef Byte const *voidpc;
 #endif
 
 #ifdef Z_U4
-typedef Z_U4 z_crc_t;
+   typedef Z_U4 z_crc_t;
 #else
-typedef unsigned long z_crc_t;
+   typedef unsigned long z_crc_t;
 #endif
 
 #if 1    /* was set to #if 1 by ./configure */
@@ -493,7 +493,7 @@ typedef unsigned long z_crc_t;
 
 /* MVS linker does not support external names larger than 8 bytes */
 #if defined(__MVS__)
-#pragma map(deflateInit_,"DEIN")
+  #pragma map(deflateInit_,"DEIN")
   #pragma map(deflateInit2_,"DEIN2")
   #pragma map(deflateEnd,"DEEND")
   #pragma map(deflateBound,"DEBND")
